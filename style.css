@@ -6,7 +6,7 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: Arial, sans-serif;
-  background: rgba(221, 175, 249, 0.88);
+  background: rgba(150, 246, 255, 0.88);
   /* background: linear-gradient(to bottom, #f7f4ee, #eef4f1); */
   color: #1f2933;
 }
@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 20px;
 }
 
@@ -36,9 +36,9 @@ body {
   opacity: 0.7;
 }
 
-h1 {
+h2 {
   margin: 0 0 14px;
-  font-size: 1.9rem;
+  font-size: 1.3rem;
   line-height: 1.15;
 }
 
@@ -66,6 +66,7 @@ button {
   border: none;
   border-radius: 999px;
   padding: 14px 20px;
+  margin-bottom: 12px;
   font-size: 1rem;
   font-weight: 600;
   background: #dbeadf;
