@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #f7f4ee, #eef4f1);
+  color: #1f2933;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(6px);
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.tiny-text {
+  margin: 0 0 10px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+h1 {
+  margin: 0 0 14px;
+  font-size: 1.9rem;
+  line-height: 1.15;
+}
+
+.message {
+  margin: 0 0 18px;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.image-frame {
+  overflow: hidden;
+  border-radius: 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.image-frame img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #dbeadf;
+  color: #1f2933;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+@media (min-width: 700px) {
+  .card {
+    max-width: 480px;
+    padding: 28px;
+  }
+
+  .image-frame img {
+    height: 300px;
+  }
+}
