@@ -8,7 +8,7 @@ const messages = [
 
 const images = [
   "images/photo1.jpg",
-  "images/photo2.jpg",
+  "images/photo2.webp",
   "images/photo3.jpg"
 ];
 
