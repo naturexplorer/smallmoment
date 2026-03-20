@@ -6,7 +6,7 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: Arial, sans-serif;
-  background: rgba(150, 246, 255, 0.88);
+  background: #02343F;
   /* background: linear-gradient(to bottom, #f7f4ee, #eef4f1); */
   color: #1f2933;
 }
@@ -14,15 +14,15 @@ body {
 .page {
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;
   padding: 20px;
 }
 
 .card {
   width: 100%;
   max-width: 420px;
-  background: rgba(255, 255, 255, 0.88);
+  background: #F0EDCC;
   backdrop-filter: blur(6px);
   border-radius: 24px;
   padding: 22px;
