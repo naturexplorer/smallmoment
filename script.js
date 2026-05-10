@@ -1,4 +1,4 @@
-const messages = text.trim().split("\n");
+const messages = open("quotes.txt", "r").read().trim().split("\n");
 const messageElement = document.getElementById("message");
 const imageElement = document.getElementById("main-image");
 const buttonElement = document.getElementById("new-btn");
