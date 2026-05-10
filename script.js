@@ -1,10 +1,19 @@
-const messages = open("quotes.txt", "r").read().trim().split("\n");
+let messages = [];
+
 const messageElement = document.getElementById("message");
 const imageElement = document.getElementById("main-image");
 const buttonElement = document.getElementById("new-btn");
 
 const projectStart = new Date(2026, 4, 10, 19, 0, 0);
 const totalPhotos = 48;
+
+async function loadMessages() {
+  const response = await fetch("quotes.txt");
+  const text = await response.text();
+
+  messages = text.trim().split("\n");
+  displayRandomMessage();
+}
 
 function displayRandomMessage() {
   const index = Math.floor(Math.random() * messages.length);
@@ -35,7 +44,7 @@ buttonElement.addEventListener("click", () => {
 })
 
 updateImage();
-displayRandomMessage();
+loadMessages();
 
 // Re-check every minute
 setInterval(updateImage, 60 * 1000);
