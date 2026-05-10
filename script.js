@@ -1,17 +1,10 @@
-const messages = [
-  "Take a breath. You do not need to solve everything today.",
-  "A quiet good moment still counts.",
-  "One sincere step forward is enough for now.",
-  "You are allowed to slow down for a second.",
-  "There is still softness in the world."
-];
-
+const messages = text.trim().split("\n");
 const messageElement = document.getElementById("message");
 const imageElement = document.getElementById("main-image");
 const buttonElement = document.getElementById("new-btn");
 
-const projectStart = new Date(2026, 2, 21, 5, 0, 0); // example
-const totalPhotos = 100;
+const projectStart = new Date(2026, 4, 10, 19, 0, 0);
+const totalPhotos = 48;
 
 function displayRandomMessage() {
   const index = Math.floor(Math.random() * messages.length);
@@ -19,14 +12,14 @@ function displayRandomMessage() {
 }
 
 function getCurrentPhotoNumber(now) {
-  const msPerDay = 24 * 60 * 60 * 1000;
+  const msPer8Hrs = 8 * 60 * 60 * 1000;
   const diffMs = now - projectStart;
-  const dayIndex = Math.floor(diffMs / msPerDay);
+  const dayIndex = Math.floor(diffMs / msPer8Hrs);
 
-  if (dayIndex < 0) return 1;
+  if (dayIndex < 0) return 0;
   if (dayIndex >= totalPhotos) return totalPhotos;
 
-  return dayIndex + 1;
+  return dayIndex;
 }
 
 function updateImage() {
@@ -44,5 +37,5 @@ buttonElement.addEventListener("click", () => {
 updateImage();
 displayRandomMessage();
 
-// Re-check every minute in case the page stays open over 5 AM
+// Re-check every minute
 setInterval(updateImage, 60 * 1000);
